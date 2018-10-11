@@ -22,8 +22,8 @@
             <i class="fa fa-comments" aria-hidden="true"></i>
             <div class="chat">
                 <div class="header">
-                    <span class="title">
-                        Dialogflow chatbot
+                    <span class="title" style="font-size:15px">
+                       Dialogflow ChatBot 
                     </span>
                     <button>
                         <i class="fa fa-times" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
                 <ul class="messages">
                 </ul>
                 <div class="footer">
-                    <div class="text-box" contenteditable="true" placeholder="Lets Start Chat" id="message" name="date" value="" disabled="true"></div>
+                    <div class="text-box" contenteditable="true" placeholder="Lets Start Chat" id="message" name="date" value="" ></div>
                     <button id="sendMessage">send</button>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 element.addClass('expand');
                 element.find('.chat').addClass('enter');
                 var strLength = textInput.val().length * 2;
-                textInput.keydown(onMetaAndEnter).prop("disabled", false).focus();
+                textInput.keydown(onMetaAndEnter).prop("diabled", false).focus();
                 element.off('click', openElement);
                 element.find('.header button').click(closeElement);
                 element.find('#sendMessage').click(sendNewMessage);
@@ -77,11 +77,11 @@
                 element.removeClass('expand');
                 element.find('.header button').off('click', closeElement);
                 element.find('#sendMessage').off('click', sendNewMessage);
-                element.find('.text-box').off('keydown', onMetaAndEnter).prop("disabled", true).blur();
-                setTimeout(function () {
+                element.find('.text-box').off('keydown', onMetaAndEnter).prop("diabled", true).blur();
+                setTimeout(function ( ){
                     element.find('.chat').removeClass('enter').show()
                     element.click(openElement);
-                }, 500);
+                } ,500);
             }
 
             function createUUID() {
@@ -127,7 +127,11 @@
                 if ((event.metaKey || event.ctrlKey) && event.keyCode == 13) {
                     sendNewMessage();
                 }
-            }
+            }	
+			function myFunction(btnVal) {
+				$('.text-box').text(btnVal);
+			}
+
         </script>
     </body>
 </html>
