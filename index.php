@@ -37,7 +37,7 @@
                 <ul class="messages">
                 </ul>
                 <div class="footer">
-                    <div class="text-box" contenteditable="true" placeholder="Lets Start Chat" id="sendMessage" name="date" value="" ></div>
+                    <div class="text-box" contenteditable="true" placeholder="Lets Start Chat" id="message" name="date" value="" ></div>
                     <button id="sendMessage">send</button>
                 </div>
             </div>
