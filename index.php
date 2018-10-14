@@ -99,7 +99,7 @@
             }
 
             function sendNewMessage() {
-                var userInput = $('.sendMessage');
+                var userInput = $('.text-box');
                 var newMessage = userInput.html().replace(/\<div\>|\<br.*?\>/ig, '\n').replace(/\<\/div\>/g, '').trim().replace(/\n/g, '<br>');
 
                 if (!newMessage)
