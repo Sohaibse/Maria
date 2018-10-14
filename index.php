@@ -130,6 +130,7 @@
             }	
 			function myFunction(btnVal) {
 				$('.text-box').text(btnVal);
+				$('#sendMessage').click()
 			}
 
         </script>
