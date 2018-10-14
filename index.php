@@ -129,7 +129,7 @@
                 }
             }	
 			function myFunction(btnVal) {
-				$('.sendMessage').text(btnVal);
+				$('.text-box').text(btnVal);
 			}
 
         </script>
