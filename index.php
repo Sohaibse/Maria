@@ -64,11 +64,11 @@
                 element.addClass('expand');
                 element.find('.chat').addClass('enter');
                 var strLength = textInput.val().length * 2;
-                textInput.keydown(onMetaAndEnter).prop("diabled", false).focus();
+                textInput.keydown(onMetaAndEnter);
                 element.off('click', openElement);
                 element.find('.header button').click(closeElement);
                 element.find('#sendMessage').click(sendNewMessage);
-                messages.scrollTop(messages.prop("scrollHeight"));
+                
             }
 
             function closeElement() {
@@ -77,7 +77,7 @@
                 element.removeClass('expand');
                 element.find('.header button').off('click', closeElement);
                 element.find('#sendMessage').off('click', sendNewMessage);
-                element.find('.text-box').off('keydown', onMetaAndEnter).prop("diabled", true).blur();
+                element.find('.text-box').off('keydown', onMetaAndEnter);
                 setTimeout(function ( ){
                     element.find('.chat').removeClass('enter').show()
                     element.click(openElement);
@@ -119,7 +119,7 @@
                 userInput.focus();
                 getBotMessage(newMessage);
                 messagesContainer.finish().animate({
-                    scrollTop: messagesContainer.prop("scrollHeight")
+                scrollTop: messagesContainer.prop("scrollHeight")
                 }, 250);
             }
 
@@ -134,5 +134,6 @@
 			}
 
         </script>
+
     </body>
 </html>
