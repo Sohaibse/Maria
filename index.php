@@ -214,7 +214,7 @@ try {
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;                    //smtp port
  
-    $mail->setFrom('sohaibsharif5@gmail.com', 'Artisans Web');
+    $mail->setFrom('sohaibsharif5@gmail.com', 'Whitehats Welcome Email');
     $mail->addAddress('sohaib.upwork60@gmail.com', 'Muhammad Sohaib');
     $mail->isHTML(true);
  
