@@ -218,7 +218,7 @@ try {
     $mail->isHTML(true);
  
     $mail->Subject = 'Whitehats Chap APp';
-    $mail->Body    = 'Hello,Welcome to our company https://whitehatsdesign.com/,Thanks for visit our website';
+    $mail->Body    = 'Hello,Welcome to our company https://whitehatsdesign.com/,Thanks for visit our website,For more information contact with us';
  
     if (!$mail->send()) {
         echo 'Message could not be sent.';
