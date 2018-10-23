@@ -195,6 +195,44 @@ function errorFunction(){
 			}
 
         </script>
+		
+		<?php
+//Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+ 
+require_once 'vendor/autoload.php';
+ 
+$mail = new PHPMailer(true);
+ 
+try {
+    $mail->isSMTP();
+    $mail->Host = 'smtp.googlemail.com';  //gmail SMTP server
+    $mail->SMTPAuth = true;
+    $mail->Username = 'sohaibsharif5@gmail.com';   //username
+    $mail->Password = 'weeblyn!2n-1';   //password
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;                    //smtp port
+ 
+    $mail->setFrom('sohaibsharif5@gmail.com', 'Artisans Web');
+    $mail->addAddress('sohaib.upwork60@gmail.com', 'Muhammad Sohaib');
+    $mail->isHTML(true);
+ 
+    $mail->Subject = 'Whitehats Chap APP';
+    $mail->Body    = 'Hello,Welcome to our company https://whitehatsdesign.com/,Thanks for visit our website,For More Details Contact with us';
+ 
+    if (!$mail->send()) {
+        echo 'Message could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        echo 'Email has been sent successfully';
+    }
+} catch (Exception $e) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+}
+
+?>
 
     </body>
 </html>
