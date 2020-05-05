@@ -83,8 +83,8 @@ function errorFunction(){
             <i class="fa fa-comments" aria-hidden="true"></i>
             <div class="chat">
                 <div class="header">
-                    <span class="title" style="font-size:15px">
-                       Dialogflow ChatBot 
+                    <span class="title" style="font-size:16px">
+                       We are available for you 24/7
                     </span>
                     <button>
                         <i class="fa fa-times" aria-hidden="true"></i>
@@ -98,7 +98,7 @@ function errorFunction(){
                 <ul class="messages">
                 </ul>
                 <div class="footer">
-                    <div class="text-box" contenteditable="true" placeholder="Lets Start Chat" id="message" name="date" value="" ></div>
+                    <div class="text-box rounded" contenteditable="true" placeholder="Lets Start Chat" id="message" name="date" value="" ></div>
                     <button id="sendMessage">send</button>
                 </div>
             </div>
